@@ -1,6 +1,9 @@
-﻿namespace APBD_10.Services;
+﻿using APBD_10.Models;
 
-public class ITokenService
+namespace APBD_10.Services;
+
+public interface ITokenService
 {
-    
+    string GenerateAccessToken(User user);
+    string GenerateRefreshToken();
 }

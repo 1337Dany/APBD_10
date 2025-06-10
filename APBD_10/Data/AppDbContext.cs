@@ -1,6 +1,11 @@
-﻿namespace APBD_10.Data;
+﻿using APBD_10.Models;
+using Microsoft.EntityFrameworkCore;
 
-public class AppDbContext
+namespace APBD_10.Data;
+
+public class AppDbContext : DbContext
 {
-    
+    public AppDbContext(DbContextOptions<AppDbContext> options) : base(options) { }
+
+    public DbSet<User> Users { get; set; }
 }
